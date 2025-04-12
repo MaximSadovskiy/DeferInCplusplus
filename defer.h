@@ -17,6 +17,6 @@ private:
 
 #define CONCAT(a, b) a ## b
 #define CONCAT_EXPAND(a, b) CONCAT(a,b)
-#define defer(text) Defer__ CONCAT_EXPAND(defer,__COUNTER__)([&]()text);
+#define defer(text) Defer__ CONCAT_EXPAND(defer,__COUNTER__)([&](){text});
 
 #endif // DEFER_H
